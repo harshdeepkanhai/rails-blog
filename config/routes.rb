@@ -15,12 +15,7 @@ Rails.application.routes.draw do
   # get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
-  get "/blog_posts/new" => "blog_posts#new", as: :new_blog_post
-  get "/blog_posts/:id" => "blog_posts#show", as: :blog_post
-  patch "/blog_posts/:id" => "blog_posts#update"
-  delete "/blog_posts/:id" => "blog_posts#destroy"
-  get "/blog_posts/:id/edit" => "blog_posts#edit", as: :edit_blog_post
-  post "/blog_posts" => "blog_posts#create", as: :blog_posts
+  resources :blog_posts
 
   # Defines the root path route ("/")
   # root "posts#index"
