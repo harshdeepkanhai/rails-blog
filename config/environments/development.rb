@@ -72,4 +72,6 @@ Rails.application.configure do
 
   # Add VS-Code Tunnel
   config.hosts << "nq709rsr-3000.inc1.devtunnels.ms"
+
+  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 end
